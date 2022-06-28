@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+    --mainColor:#200016;
+    --secColor:#10001f;
+    --lightColor:#4633b9;
+}
+
+::selection {
+    background-color: #1a1a1a63;
+    color: #eee;
+}
+
+::-webkit-scrollbar {
+    background-color: var(--secColor);
+    width: 1em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--mainColor);
+    box-shadow: 0px 0px 25px 25px var(--secColor);
+}
+
+body {
+  background: linear-gradient(var(--mainColor), var(--secColor));
+  height: 100vh;
+  font-family: system-ui;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 100;
+  padding: 20px 30px;
+
+}
+header .logo {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  list-style: none;
+}
+header ul li {
+  margin-right: 30px;
+}
+header ul li a {
+  padding: 6px 20px;
+  border-radius: 20px;
+}
+header ul li a:hover,
+.active {
+  background-color: #fff;
+  color: var(--mainColor);
+}
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: linear 2s;
+}
+.main::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to top, var(--mainColor) , transparent);
+
+}
+.main img {
+  position: absolute;
+  width: 100%;
+  height: 110vh;
+  object-fit: cover;
+}
+#moon {
+    mix-blend-mode: screen; 
+    transform: translateY(80px);
+}
+.main-title {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  transform: translateY(-140px);
+}
+
+.content {
+    color: #fff;
+    padding: 30px;
+}
+
+.content h2 {
+    margin: 20px;
+    font-size: 30px;
+}
+
+.content p {
+    margin: 20px;
+}
+
+footer {
+  padding: 20px;
+  color: #ffffffca;
+  font-weight: bold;
+  background: linear-gradient(to top, var(--mainColor) , transparent);
+  text-align: center;
+  font-size: 20px;
+}
+
+footer.attribution a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer.attribution a:hover {
+  color: #4d54ff;
+}
+
+
